@@ -1,0 +1,7 @@
+{
+  "name": "FDA",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

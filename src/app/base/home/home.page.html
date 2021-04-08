@@ -1,0 +1,46 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary" class="toolbar-ios-fix">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="location-outline"></ion-icon>
+      </ion-button>
+      <ion-label>Home</ion-label>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar color="primary" class="toolbar-ios-fix">
+    <ion-searchbar placeholder="Search Offers" slot="start" class="more-padding"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-no-padding">
+  <slider-component></slider-component>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let item of filterItemsBlock">
+        <ion-thumbnail>
+          <img [src]=[item.imageUrl]>
+        </ion-thumbnail>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list lines="none">
+    <ion-item *ngFor="let item of custItems" button [routerLink]="['/','base','tabs','home', item.id]">
+      <ion-thumbnail slot="start">
+        <ion-img
+          [src]=[item.imageUrl]>
+        </ion-img>
+      </ion-thumbnail>
+      <ion-thumbnail slot="end">
+        <ion-badge>{{item.rating + ".0"}}</ion-badge>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>{{item.custName}}</h3>
+        <p>{{item.description}}</p>
+        <p>{{item.additionalInfo}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

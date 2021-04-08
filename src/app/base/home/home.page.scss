@@ -1,0 +1,32 @@
+.ios ion-toolbar .more-padding {
+  padding-top: 15px;
+}
+
+.curved-style{
+  //border-radius:20px;
+  border-top-right-radius:25px solid #3880ff;
+  border-top-left-radius:25px solid #3880ff;
+  background-color:#3880ff;
+}
+
+ion-card-title{
+  --color:var(--ion-color-danger);
+}
+
+ion-card-subtitle{
+  --color:var(--ion-color-danger);
+}
+
+
+ion-img::part(image) {
+  border-radius: 5px;
+}
+
+
+
+
+img{
+  border-radius: 5px;
+}
+
+
